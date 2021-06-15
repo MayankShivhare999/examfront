@@ -19,4 +19,5 @@ export class CategoryService {
   public addCategory(category) {
     return this.http.post(`${baseUrl}/category/`, category);
   }
+
 }

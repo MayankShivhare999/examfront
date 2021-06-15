@@ -4,14 +4,14 @@
     </a>
     <span>My App</span>
     <span class="example-spacer"></span>
-    <a *ngIf="!isLoggedIn" routerLink="login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      Login    &nbsp;&nbsp;&nbsp;
+    <a *ngIf="!isLoggedIn" routerLink="login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" style="margin-right: 20px;">
+      Login    
     </a>
-    <a *ngIf="!isLoggedIn" routerLink="signup" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <a *ngIf="!isLoggedIn" routerLink="signup" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" style="margin-right: 20px;">
       Register
     </a>
-    <a routerLink="admin/profile" *ngIf="isLoggedIn" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      {{user.username}} &nbsp;&nbsp;&nbsp;
+    <a routerLink="admin/profile" *ngIf="isLoggedIn" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" style="margin-right: 20px;">
+      {{user.username}} 
     </a>
     <a (click)="logout()" *ngIf="isLoggedIn" routerLink="login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
       Logout    &nbsp;&nbsp;&nbsp;
