@@ -1,0 +1,48 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <!-- instructions -->
+                <h3>instructions</h3>
+                
+            </div>
+    
+            <div class="col-md-8">
+                <!-- questions -->
+                <ng-container *ngIf="questions">
+    
+                    <h1>{{questions[0].quiz.title}}</h1>
+    
+                </ng-container>
+                <mat-card *ngFor="let q of questions; let i = index" style="margin-top: 10px;">
+                    <mat-card-content>
+                        Q {{i+1}})
+                        <p [innerHtml]="q.content"></p>
+                        <mat-divider></mat-divider>
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col-md-6">
+                                <input type="radio" [name]="i" [value]="q.option1"/>{{q.option1}}
+                            </div>
+                            <div class="col-md-6">
+                                <input type="radio" [name]="i" [value]="q.option2"/>{{q.option2}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="radio" [name]="i" [value]="q.option3"/>{{q.option3}}
+                            </div>
+                            <div class="col-md-6">
+                                <input type="radio" [name]="i" [value]="q.option4"/>{{q.option4}}
+                            </div>
+                        </div>
+                    </mat-card-content>
+
+                </mat-card>
+            </div>
+    
+            <div class="col-md-2">
+                <!-- progress -->
+            </div>
+        </div>
+    </div>
+</div>
