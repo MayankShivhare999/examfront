@@ -99,7 +99,10 @@ const routes: Routes = [
         path:'instructions/:qid',
         component: InstructionsComponent
       },
-      
+      {
+        path:'start/:qid',
+        component: StartComponent,
+      },
     ]
   },
   {
